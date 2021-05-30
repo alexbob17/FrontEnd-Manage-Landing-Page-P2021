@@ -26,7 +26,7 @@ Vary Light Gray: hsl(0, 0%, 98%)
 ### Body Copy
 
 - Font size: 16px
-
+- color: White;
 ### Font
 
 - Family: [Be Vietnam](https://fonts.google.com/specimen/Be+Vietnam)

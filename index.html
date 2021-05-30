@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
 
+    <!-- Jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    
+    <!-- Owl Carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <meta name="theme-color" content="#fafafa" />
   </head>
 
@@ -62,7 +71,7 @@
     <section class="container">
         <div class="grid-container">
             <div>
-              <h2>What s different about Manage?</h2>
+              <h2>What’s different about Manage?</h2>
               <p class="text-gray">Manage provides all the functionality your <br>
               team needs, without the complexity. Our <br>
               software is tailor-made for modern digital <br>
@@ -80,20 +89,63 @@
               <div>
                 <button class="btn-small2">02</button>
                 <h4>Advanced built-in reports</h4>
-                <p class="text-gray">See how your day-to-day task fit into the wider vision. <br>
-                Go from tracking progress at the milestone level all the <br> way done to the smallest of details. Never lose sight of <br> the bigger picture again.
+                <p class="text-gray">Set internal delivery estimates and track progress toward <br>
+                company goal. Our customisable dashboard helps you <br> build out the reports you need to keep key stakeholders<br> informed.
                 </p>
              </div>
               <div>
                 <button class="btn-small3">03</button>
-                <h4>Track company-wide progress</h4>
-                <p class="text-gray">See how your day-to-day task fit into the wider vision. <br>
-                Go from tracking progress at the milestone level all the <br> way done to the smallest of details. Never lose sight of <br> the bigger picture again.
+                <h4>Everything you need in one place</h4>
+                <p class="text-gray">Stop jumping from one service to another to <br> communicate, store files, track task and share <br> documents. Manage offers an all-in-one team <br> productivity solution.
                 </p>
               </div>
             </div>
         </div>
     </section>
+
+    <!-- Personal Cards  -->
+   
+   
+      <h2 class="text-center">What they’ve said</h2>
+        <div class="grid-container">
+          <div class="slider owl-carousel">
+          <div class="card">
+           <div class="img-card"> <img src="img/avatar-anisha.png" alt=""></div>
+            <h4 class="text-center">Anisha Li</h4>
+            <p class="text-gray text-center">Page has supercharged our teams workflow. <br> The haintain visibility on larger milestone at all times <br> keeps everyone motivated.
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-center">Ali Bravo</h4>
+            <p class="text-gray text-center">We have able to cancel so many. other subscriptions<br> since using Manage. There is no more cross-channel <br> confusion and everyone is much more focused.
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-center">Richard Watts</h4>
+            <p class="text-gray text-center">
+              Manage allows us to provide structure and procure <br> keeps us organized and focused. I cant stop recornized them to everyone i talk to!
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-center">Shanai Gough</h4>
+            <p class="text-gray text-center">
+              Manage allows us to provide structure and procure <br> keeps us organized and focused. I cant stop recornized them to everyone i talk to!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-m text-center">
+        <a href="#" class="btn-start">Get Started</a>
+      </div>
+    
+
+
+     <script>
+       $(".slider").owlCarousel({
+         loop:true,
+         autoplay: true,
+       });
+     </script>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>

@@ -13,23 +13,12 @@
  *    ## main navigation
  *    ## button style
  *    ## mobile menu toggle
- *    ## graficos
+ *    ## grafics
  *  # About
  *    ## Title content
  *    ## about buttons
- *  # about
- *    ## about process
- *  # services  
- *    ## services list
- *  # works
- *    ## bricks/masonry
- *  # clients
- *  # testimonials
- *  # contact
- *    ## contact social
- *  # footer
- *    ## copyright
- *    ## go top
+ *  # Cards
+ *    ## about card personal
  *
  * =================================================================== */
 
@@ -42,7 +31,6 @@ html {
   color: #222;
   font-size: 16px;
   line-height: 1.4;
-  font-family: var(--font-primary);
 }
 
 :root {
@@ -64,19 +52,20 @@ a {
   text-decoration: none;
 }
 body {
-  
+  font-family: var(--font-primary);
 }
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
   color: var(--color-primary-two);
 }
-h1{
+h1 {
   font-size: 3rem;
 }
-h2{
+h2 {
   font-size: 2.4rem;
 }
-
-
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -139,47 +128,46 @@ textarea {
    ========================================================================== */
 
 /* PROFITS */
-.text-center{
+.text-center {
   text-align: center;
 }
-.btn-start{
+.btn-start {
   background: var(--color-primary-one);
   color: var(--color-neutral-lightGray);
   padding: 0.8rem 1.8rem;
   border-radius: 1.25rem;
   font-size: 0.9rem;
 }
-.btn-start:hover{
+.btn-start:hover {
   opacity: 0.7;
 }
-.container{
-  width: min(87%,70rem);
+.container {
+  width: min(87%, 70rem);
   margin: 0 auto;
 }
-.btn-m{
+.btn-m {
   padding-top: 2rem;
 }
-.text-gray{
+.text-gray {
   color: var(--color-neutral-Dark);
   line-height: 1.5625rem;
 }
-.img-bg{
+.img-bg {
   position: absolute;
   object-fit: contain;
   top: 30rem;
   width: 100%;
 }
 
-
 /* HEADER */
 header {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-image: url(../img/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
   background-position-x: 43rem;
   background-position-y: -6rem;
-  background-size: auto 700px ;
+  background-size: auto 700px;
 }
 .navbar-menu {
   padding-top: 5rem;
@@ -198,7 +186,7 @@ header {
 .navbar-links a:hover {
   color: var(--color-neutral-Dark);
 }
-.grid-container{
+.grid-container {
   display: grid;
   grid-auto-flow: column;
   padding-top: 4rem;
@@ -208,66 +196,97 @@ header {
 
 /* About buttons*/
 
-.btn-small1{
-  padding: .7rem 1.5rem;
+.btn-small1 {
+  padding: 0.7rem 1.5rem;
   background: var(--color-primary-one);
   border-radius: 50px;
   color: var(--color-neutral-lightGray);
-  position:absolute;
-  right: 27rem;
+  position: absolute;
+  right: 28rem;
   top: 5rem;
   outline: none;
   border: none;
 }
 
-.btn-small2{
-  padding: .7rem 1.5rem;
+.btn-small2 {
+  padding: 0.7rem 1.5rem;
   background: var(--color-primary-one);
   border-radius: 30px;
   color: var(--color-neutral-lightGray);
-  position:absolute;
-  right: 27rem;
+  position: absolute;
+  right: 28rem;
   top: 15rem;
   outline: none;
   border: none;
 }
-.btn-small3{
-  padding: .7rem 1.5rem;
+.btn-small3 {
+  padding: 0.7rem 1.5rem;
   background: var(--color-primary-one);
   border-radius: 50px;
   color: var(--color-neutral-lightGray);
-  position:absolute;
-  right: 27rem;
+  position: absolute;
+  right: 28rem;
   top: 25.1rem;
   outline: none;
   border: none;
 }
 
+/* Card personal */
+
+.slider {
+  overflow: hidden;
+}
+
+.card {
+  width: 210px;
+  height: 250px;
+  background: var(--color-neutral-lightGray);
+}
+
+.card p {
+  font-size: 0.8125rem;
+}
 
 
+.img-card img{
+  max-width: 50px;
+  max-height: 50px;
+}
 
-
+.img-card{
+  position: absolute;
+  top: -1rem;
+  left: 11rem;
+}
 
 
 /* ==========================================================================
   Media queries
    ========================================================================== */
-@media(max-width:800px ) {
-  .navbar-menu{
+@media (max-width: 800px) {
+  .navbar-menu {
     grid-auto-flow: row;
     gap: 2;
   }
-  .navbar-links a{
+  .navbar-links a {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-right: 0;
   }
-  .btn-start{
+  .btn-start {
     display: none;
   }
 }
 
+@media (max-width: 1440px) {
+  .card {
+    width: 400px;
+    height: 150px;
+    border: 3px solid var(--color-neutral-lightGray);
+    background: var(--color-neutral-lightGray);
+  }
+}
 
 /* ==========================================================================
    Helper classes
