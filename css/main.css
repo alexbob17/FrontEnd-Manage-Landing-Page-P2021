@@ -1,31 +1,82 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/* =================================================================== 
+ *
+ *  Manage Landing page v1.0 Main Stylesheet
+ *  06-10-2018
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # base style overrides
+ *    ## links
+ *  # Global styles
+ *  # Profits
+ *  # Header
+ *    ## main navigation
+ *    ## button style
+ *    ## mobile menu toggle
+ *    ## graficos
+ *  # About
+ *    ## Title content
+ *    ## about buttons
+ *  # about
+ *    ## about process
+ *  # services  
+ *    ## services list
+ *  # works
+ *    ## bricks/masonry
+ *  # clients
+ *  # testimonials
+ *  # contact
+ *    ## contact social
+ *  # footer
+ *    ## copyright
+ *    ## go top
+ *
+ * =================================================================== */
 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.4;
+  font-family: var(--font-primary);
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+:root {
+  /* Colors Primary */
+  --color-primary-one: hsl(12, 88%, 59%);
+  --color-primary-two: hsl(228, 39%, 23%);
+
+  /* Colors Neutrals */
+  --color-neutral-Dark: hsl(227, 12%, 61%);
+  --color-neutral-veryDark: hsl(233, 12%, 13%);
+  --color-neutral-paleRed: hsl(13, 100%, 96%);
+  --color-neutral-lightGray: hsl(0, 0%, 98%);
+
+  /* Typography */
+  --font-primary: "Be Vietnam", sans-serif;
+}
+/* GLOBAL */
+a {
+  text-decoration: none;
+}
+body {
+  
+}
+h1,h2,h3,h4{
+  color: var(--color-primary-two);
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2.4rem;
+}
+
+
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -87,6 +138,137 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* PROFITS */
+.text-center{
+  text-align: center;
+}
+.btn-start{
+  background: var(--color-primary-one);
+  color: var(--color-neutral-lightGray);
+  padding: 0.8rem 1.8rem;
+  border-radius: 1.25rem;
+  font-size: 0.9rem;
+}
+.btn-start:hover{
+  opacity: 0.7;
+}
+.container{
+  width: min(87%,70rem);
+  margin: 0 auto;
+}
+.btn-m{
+  padding-top: 2rem;
+}
+.text-gray{
+  color: var(--color-neutral-Dark);
+  line-height: 1.5625rem;
+}
+.img-bg{
+  position: absolute;
+  object-fit: contain;
+  top: 30rem;
+  width: 100%;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position-x: 43rem;
+  background-position-y: -6rem;
+  background-size: auto 700px ;
+}
+.navbar-menu {
+  padding-top: 5rem;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+.navbar-links a {
+  color: var(--color-primary-two);
+  margin-right: 2rem;
+}
+.navbar-links a:last-of-type {
+  margin-right: 0;
+}
+.navbar-links a:hover {
+  color: var(--color-neutral-Dark);
+}
+.grid-container{
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 4rem;
+  gap: 6rem;
+  position: relative;
+}
+
+/* About buttons*/
+
+.btn-small1{
+  padding: .7rem 1.5rem;
+  background: var(--color-primary-one);
+  border-radius: 50px;
+  color: var(--color-neutral-lightGray);
+  position:absolute;
+  right: 27rem;
+  top: 5rem;
+  outline: none;
+  border: none;
+}
+
+.btn-small2{
+  padding: .7rem 1.5rem;
+  background: var(--color-primary-one);
+  border-radius: 30px;
+  color: var(--color-neutral-lightGray);
+  position:absolute;
+  right: 27rem;
+  top: 15rem;
+  outline: none;
+  border: none;
+}
+.btn-small3{
+  padding: .7rem 1.5rem;
+  background: var(--color-primary-one);
+  border-radius: 50px;
+  color: var(--color-neutral-lightGray);
+  position:absolute;
+  right: 27rem;
+  top: 25.1rem;
+  outline: none;
+  border: none;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+  Media queries
+   ========================================================================== */
+@media(max-width:800px ) {
+  .navbar-menu{
+    grid-auto-flow: row;
+    gap: 2;
+  }
+  .navbar-links a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .btn-start{
+    display: none;
+  }
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -103,10 +285,6 @@ textarea {
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
 .sr-only {
@@ -260,4 +438,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
