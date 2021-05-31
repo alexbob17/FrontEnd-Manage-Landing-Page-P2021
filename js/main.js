@@ -18,7 +18,7 @@ iconClose.addEventListener('click', ()=> {
 
 
 $(window).resize(function(){
-    if($(window).width() > 800){
+    if($(window).width() > 768){
       iconClose.classList.add('icon-close');
       navbarDisplay.classList.add('navbar-none'); 
     }
