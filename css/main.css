@@ -18,7 +18,7 @@
  *    ## Title content
  *    ## about buttons
  *  # Cards
- *    ## about card personal
+ *    ## testimonial cards
  *
  * =================================================================== */
 
@@ -231,62 +231,227 @@ header {
   border: none;
 }
 
-/* Card personal */
+/* Slider */
 
 .slider {
   overflow: hidden;
 }
 
+/* Card Testimonial */
+
 .card {
-  width: 210px;
-  height: 250px;
+  position: relative;
+  width: 400px;
+  height: 150px; 
+  border: 3px solid var(--color-neutral-lightGray);
   background: var(--color-neutral-lightGray);
+  margin-top: 2rem;
+  padding-top: 1.5625rem;
 }
+
 
 .card p {
   font-size: 0.8125rem;
 }
 
-
-.img-card img{
-  max-width: 50px;
-  max-height: 50px;
+.img-card img {
+  max-width: 3.125rem;
+  max-height: 3.125rem;
 }
 
-.img-card{
+.img-card {
   position: absolute;
   top: -1rem;
   left: 11rem;
 }
 
+/* Bg pattern */
+.bg-pattern {
+  position: absolute;
+  z-index: -1;
+  left: -35rem;
+  top: 65rem;
+}
+
+/* Banner */
+section .banner {
+  margin-top: 10rem;
+  width: 100%;
+  background: url(../img/bg-simplify-section-desktop.svg);
+  background-position: top center;
+  background-position-y: -12rem;
+  background-position-x: 10rem;
+  /* background-size: cover; */
+}
+
+.banner {
+  background: var(--color-primary-one);
+  margin-top: 2rem;
+  height: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner div {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.banner h1 {
+  color: var(--color-neutral-lightGray) !important;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  background: var(--color-neutral-veryDark);
+}
+
+.footer-navbar a:first-child {
+  padding-top: 0;
+}
+.footer-navbar a {
+  color: var(--color-neutral-lightGray);
+}
+
+.footer-links {
+  margin-top: 6rem;
+}
+
+.footer-links a {
+  margin-right: 1rem;
+}
+
+.footer-links a:last-of-type {
+  margin-right: 0;
+}
+
+.navbar-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navbar a {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+.footer-navbar2 a {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+}
+.footer-navbar2 a {
+  color: var(--color-neutral-lightGray);
+}
+.input-contact input {
+  border-radius: 3.125rem;
+  border: none;
+  outline: none;
+  height: 3.125rem;
+  width: 55%;
+  color: var(--color-neutral-Dark);
+  font-size: 0.9375rem;
+}
+.btn-go {
+  padding: 0.7rem 1.5rem;
+  background: var(--color-primary-one);
+  border-radius: 30px;
+  color: var(--color-neutral-lightGray);
+  margin-left: 1rem;
+}
+
+.copyright {
+  font-size: 0.9375rem;
+  margin-top: 4rem;
+  margin-left: 3rem;
+}
+
+.copyright p {
+  color: var(--color-neutral-Dark) !important;
+}
+.icon-close {
+  display: none;
+}
 
 /* ==========================================================================
   Media queries
    ========================================================================== */
+@media (min-width: 800px) {
+  .icon-hamburger {
+    display: none;
+  }
+}
+
+@media(min-width: 810px) {
+  .icon-close{
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
+  body{
+    font-size: 14px;
+  }
   .navbar-menu {
-    grid-auto-flow: row;
-    gap: 2;
+     display: flex; 
+     justify-content: space-around; 
+    position: relative;
+  }
+  .navbar-menu .icon-hamburger{
+    padding-left: 30rem;
+  }
+  .icon-hamburger:last-of-type{
+    padding-left: 0;
+  }
+  .navbar-links{
+    width: 300px;
+    height: 250px;
+    background:#fff;
+    border-radius: 10px;
+    border: 3px solid  var(--color-neutral-lightGray);
+    position: absolute;
+    z-index: 1;
+    color:var(--color-primary-two);
+    font-weight: bold;
   }
   .navbar-links a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin-top: 1.4rem;
     margin-right: 0;
   }
+
   .btn-start {
     display: none;
   }
-}
-
-@media (max-width: 1440px) {
-  .card {
-    width: 400px;
-    height: 150px;
-    border: 3px solid var(--color-neutral-lightGray);
-    background: var(--color-neutral-lightGray);
+  .navbar-none {
+    display: none;
+  }
+  .grid-container {
+    display: grid;
+    grid-auto-flow: row;
+    padding-top: 4rem;
+    gap: 5rem;
+    position: relative;
+  } 
+  .card{
+    width: 250px;
+    height: 200px;
+    margin-right: 10rem;
+  }
+  .img-card{
+    position: absolute;
+    top: -1rem;
+    left: 6.5rem;
   }
 }
+
 
 /* ==========================================================================
    Helper classes
